@@ -1,13 +1,31 @@
-\begin{frame}{Объединение методов}
-\begin{center}
-\vspace{0.5cm}
-{\Large Цель}
+\begin{frame}{Обзор исследований: генерация тестов с LLM}
+
+\textbf{Подход 1: LLM генерирует тесты по требованиям}
 
 \vspace{0.3cm}
-Обеспечить точность сгенерированному коду \\с помощью TDD
 
-\vspace{0.5cm}
-LLM генерирует код,\\
-TDD-тесты проверяют его корректность.
-\end{center}
+\begin{itemize}
+    \item \textbf{Alagarsamy et al., 2025 (JSS)}
+    \begin{itemize}
+        \item Fine-tuned GPT-3.5 генерирует unit-тесты из текста требований
+        \item \textit{Проблема:} лишь 67\% тестов точно отражают требования. Проанализируем почему.
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \item \textbf{Schäfer et al., 2024 (IEEE TSE)}
+    \begin{itemize}
+        \item TestPilot: LLM генерирует тесты по сигнатуре и коду функции
+        \item \textit{Проблема:} сгенерированные тесты слабо совпадают с эталонными ($<$50\%), сложно оценить их смысловую полноту
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \item \textbf{Ahmed et al., 2024 (arXiv — TSE draft)}
+    \begin{itemize}
+        \item Auto-TDD: генерация тестов из GitHub-issues
+        \item \textit{Проблема:} только 23.6\% тестов реально обнаруживают баг (fail-to-pass), остальные тривиальны. 
+    \end{itemize}
+\end{itemize}
+
 \end{frame}

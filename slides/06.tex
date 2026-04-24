@@ -1,0 +1,31 @@
+\begin{frame}{Статьи для анализа: генерация кода по тестам с LLM}
+
+\textbf{Подход 2: LLM пишет код по готовым тестам человека}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item \textbf{Mathews \& Nagappan, 2024 (ASE)}
+    \begin{itemize}
+        \item TDD-промптинг: тесты в промпте повышают процент решённых задач
+        \item \textit{Проблема:} модели часто игнорируют часть тестов при большом их числе (эффект «потери середины»)
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \item \textbf{Cui, 2026 (arXiv — ICLR'25)}
+    \begin{itemize}
+        \item WebApp1K: бенчмарк TDD для веб-приложений, 19 моделей
+        \item \textit{Проблема:} даже лучшие модели теряют инструкции на длинных промптах, производительность падает на 20-30\%
+    \end{itemize}
+
+    \vspace{0.2cm}
+
+    \item \textbf{Piya \& Sullivan, 2024 (LLM4Code)}
+    \begin{itemize}
+        \item LLM4TDD: итеративная генерация кода по тестам (LeetCode)
+        \item \textit{Проблема:} 11.5\% задач остаются нерешёнными; качество тестов, написанных пользователем, критично влияет на результат
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
