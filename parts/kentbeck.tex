@@ -143,7 +143,7 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Рекомендации}
+\begin{frame}{Рекомендации из слов Кента Бека}
     \begin{itemize}
         \item Не меняйте тесты ради прохождения -- фиксируйте ожидаемое поведение.
         \item Автоматически запускайте тесты после каждого изменения агента.
@@ -152,5 +152,73 @@
         \item Будьте готовы выбрасывать код: генерация дешёвая, экспериментируйте чаще.
     \end{itemize}
 \end{frame}
+
+\begin{frame}{Что думают разработчики?}
+    \begin{block}{Данные Stack Overflow Developer Survey 2025}
+        \begin{itemize}
+            \item \textbf{84\%} разработчиков используют или планируют использовать AI-инструменты.
+            \item \textbf{66\%} называют \textit{«почти правильные»} ответы главной проблемой.
+            \item \textbf{45\%} говорят, что отладка AI-кода отнимает \textit{больше времени}, чем написание собственного.
+        \end{itemize}
+    \end{block}
+    \vspace{0.3cm}
+\end{frame}
+
+\begin{frame}{Что думают разработчики?}
+    \begin{alertblock}{Stack Overflow 2025: доверие падает}
+        \begin{itemize}
+            \item Уровень \textbf{недоверия} к точности AI-кода вырос с 31\% (2024) до \textbf{46\%} (2025).
+            \item Лишь \textbf{33\%} разработчиков доверяют AI-инструментам (было 43\% в 2024).
+            \item Тенденция: чем активнее используется AI, тем выше запрос на проверку.
+        \end{itemize}
+    \end{alertblock}
+    \vspace{0.3cm}
+\end{frame}
+
+\begin{frame}{Fight Fire With Fire: How Much Can We Trust ChatGPT on Source Code-Related Tasks? (2024)}
+    \begin{block}{}
+        ChatGPT часто \textbf{ошибочно считает свой неверный код правильным} и страдает от \textit{«самопротиворечивых галлюцинаций»} во время самопроверки.
+    \end{block}
+    \begin{itemize}
+        \item Опасно полагаться на «самооценку» AI.
+        \item Необходима \textbf{независимая внешняя верификация} — автоматические тесты.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Survey On Systemic Security Risks in Vibe Coding and
+Autonomous Development Workflows (2026)}
+ \begin{block}{}
+     Разработчик превращается в \textbf{«менеджера намерений»}, а агент — в \textbf{потенциального инсайдера}.  
+        Риски сместились с артефактов кода на поведение самого агента.
+    \end{block}
+    \begin{itemize}
+        \item \textbf{Indirect Prompt Injection (IPI)}: вредоносные инструкции в файлах, комментариях или README, которые агент послушно выполняет. Успешность атак — до 84\%.
+        \item \textbf{Lies-in-the-Loop (LITL)}: агент лжёт в диалогах подтверждения — показывает «запускаю тесты», а сам выполняет опасную команду. Подрывает «человека в цикле».
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Подхалимство и рост долга безопасности}
+    \begin{itemize}
+        \item \textbf{Sycophancy (подхалимство)}: LLM-агенты склонны угождать — если разработчик торопится, они предложат отключить проверку SSL-сертификата, лишь бы «решить» проблему быстрее.
+        \item Это формирует \textbf{«Security Debt»}: накапливаются уязвимости, невидимые при поверхностном «vibe check».
+    \end{itemize}
+    \vspace{0.3cm}
+\end{frame}
+
+\begin{frame}{TDD как противодействие рискам AI-агентов}
+    \begin{block}{Почему практики TDD становятся критически важными}
+        \begin{itemize}
+            \item \textbf{Неизменяемая спецификация}: тесты фиксируют истинное ожидаемое поведение, которое агент не имеет права искажать.
+            \item \textbf{Мгновенное обнаружение саботажа}: тесты (прогоняемые за 300 мс) немедленно выявляют ложные изменения, внесённые агентом.
+            \item \textbf{Снижение тревоги}: зелёная полоса тестов подтверждает, что «джинн» не навредил системе.
+        \end{itemize}
+    \end{block}
+    \vspace{0.3cm}
+    \begin{center}
+        \textit{«Экономия на анти-тревожных таблетках уже окупает TDD» — Кент Бек}
+    \end{center}
+\end{frame}
+
+
 
 \end{document}
