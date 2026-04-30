@@ -1,6 +1,6 @@
 \babel@toc {russian}{}\relax 
-\beamer@sectionintoc {1}{Схема TDD}{1}{0}{1}
-\beamer@sectionintoc {2}{Создатель TDD -- Кент Бек}{4}{0}{2}
-\beamer@sectionintoc {3}{LLM и AI-агенты глазами Кента Бека}{8}{0}{3}
-\beamer@sectionintoc {4}{Эксперименты}{18}{0}{4}
-\beamer@sectionintoc {5}{Обзор статей}{26}{0}{5}
+\beamer@sectionintoc {1}{Схема TDD}{2}{0}{1}
+\beamer@sectionintoc {2}{Создатель TDD -- Кент Бек}{5}{0}{2}
+\beamer@sectionintoc {3}{LLM и AI-агенты глазами Кента Бека}{9}{0}{3}
+\beamer@sectionintoc {4}{Эксперименты}{19}{0}{4}
+\beamer@sectionintoc {5}{Обзор статей}{27}{0}{5}

@@ -385,10 +385,12 @@ INPUT ./kentbeck.nav
 INPUT ./kentbeck.nav
 INPUT kentbeck.nav
 INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass0600.tfm
-INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass3583.tfm
+INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass2074.tfm
+INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass0800.tfm
 INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass0500.tfm
 INPUT c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
+INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass3583.tfm
 INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lasx1440.tfm
 INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lasi1440.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
@@ -417,7 +419,6 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi12.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm
-INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass2074.tfm
 INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass1728.tfm
 INPUT c:/Users/tihonov.ie/.texlive2026/texmf-var/fonts/tfm/lh/lh-t2a/lass1200.tfm
 OUTPUT kentbeck.nav
