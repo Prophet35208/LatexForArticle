@@ -10,6 +10,14 @@
 \usetheme{Madrid}
 \usecolortheme{default}
 
+% Автоматическое отображение названия секции в начале каждой новой секции
+\AtBeginSection[]{
+  \begin{frame}
+    \centering
+    \Huge \insertsection
+  \end{frame}
+}
+
 \begin{document}
 
 \section{Схема TDD}
@@ -175,6 +183,161 @@
     \vspace{0.3cm}
 \end{frame}
 
+\section{Эксперименты}
+
+\begin{frame}{Дизайн эксперимента}
+\textbf{Цель исследования}
+
+Оценить влияние структуры процесса разработки (TDD) на эффективность использования LLM.
+
+\vspace{0.5em}
+
+\textbf{Группы}
+\begin{itemize}
+    \item LLM + неструктурированный подход
+    \item LLM + TDD
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Условия}
+\begin{itemize}
+    \item Единое техническое задание
+    \item Использование LLM разрешено в обеих группах
+    \item Финальная проверка на одном наборе тестов
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Различие подходов}
+\textbf{LLM + обычный подход}
+\begin{itemize}
+    \item Генерация кода через промпты
+    \item Итеративная доработка
+    \item Нет фиксированного критерия корректности в процессе
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{LLM + TDD}
+\begin{itemize}
+    \item Работа от тестов (заданы заранее)
+    \item Код разрабатывается под их прохождение
+    \item Тесты задают явный критерий корректности
+\end{itemize}
+
+\vspace{0.5em}
+
+Ключевое различие: степень формализации задачи для LLM
+\end{frame}
+
+\begin{frame}{Сбор данных}
+\textbf{Логируемые данные}
+\begin{itemize}
+    \item Все запросы к LLM и ответы модели
+    \item Количество итераций взаимодействия
+    \item Промежуточные и финальные версии кода
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Дополнительно}
+\begin{itemize}
+    \item Время выполнения задачи
+    \item Результаты выполнения тестов
+\end{itemize}
+
+\vspace{0.5em}
+
+Все данные используются для последующего количественного анализа
+\end{frame}
+
+\begin{frame}{Метрики (объективные)}
+\textbf{Эффективность}
+\begin{itemize}
+    \item Время выполнения задачи
+    \item Количество итераций с LLM
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Качество результата}
+\begin{itemize}
+    \item Процент прохождения тестов
+    \item Количество успешно пройденных кейсов
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Использование LLM}
+\begin{itemize}
+    \item Количество обращений к модели
+    \item Объем промптов
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Метрики (субъективные)}
+\textbf{Оценка участниками}
+\begin{itemize}
+    \item Сложность выполнения задачи
+    \item Уверенность в корректности решения
+    \item Удовлетворенность результатом
+\end{itemize}
+
+\vspace{0.5em}
+
+Позволяют оценить влияние подхода на восприятие процесса разработки
+\end{frame}
+
+\begin{frame}{Исследовательские вопросы}
+\textbf{Эффективность}
+\begin{itemize}
+    \item Ускоряет ли TDD работу с LLM
+    \item Снижает ли количество итераций
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Качество}
+\begin{itemize}
+    \item Улучшает ли TDD корректность решений
+    \item Снижает ли количество ошибок
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Поведение LLM}
+\begin{itemize}
+    \item Меняется ли характер взаимодействия с моделью
+    \item Требуется ли меньше уточняющих запросов
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ключевые вопросы исследования}
+\textbf{Влияние на решение задачи}
+\begin{itemize}
+    \item Помогает ли TDD повысить корректность решений при использовании LLM
+    \item Улучшает ли формализация задачи качество генерации кода
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Изменение роли разработчика}
+\begin{itemize}
+    \item Смещается ли фокус с написания кода на формулирование требований
+    \item Упрощает ли TDD взаимодействие с LLM
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Когнитивная нагрузка}
+\begin{itemize}
+    \item Снижается ли количество итераций и исправлений
+    \item Влияет ли структура (через тесты) на сложность работы с LLM
+\end{itemize}
+\end{frame}
+
+\section{Обзор статей}
+
 \begin{frame}{Fight Fire With Fire: How Much Can We Trust ChatGPT on Source Code-Related Tasks? (2024)}
     \begin{block}{}
         ChatGPT часто \textbf{ошибочно считает свой неверный код правильным} и страдает от \textit{«самопротиворечивых галлюцинаций»} во время самопроверки.
@@ -218,7 +381,5 @@ Autonomous Development Workflows (2026)}
         \textit{«Экономия на анти-тревожных таблетках уже окупает TDD» — Кент Бек}
     \end{center}
 \end{frame}
-
-
 
 \end{document}
